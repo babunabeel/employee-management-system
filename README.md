@@ -5,20 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.6.3p62
 
-* System dependencies
+* Rails 6
 
-* Configuration
+* Setup
 
-* Database creation
+	rails db:create
+	rails db:migrate
+	rails db:seed
+	rails s
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* login 
+	
+	username: admin@example.com
+	password: adminadmin

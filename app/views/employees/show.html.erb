@@ -1,0 +1,23 @@
+<h1>Employee Show</h1>
+<table class="table table-striped">
+	<tr>
+		<td><strong>Firstname:</strong></td>
+		<td><%= @employee.firstname %></td>
+	</tr>
+	<tr>
+		<td><strong>Lastname:</strong></td>
+		<td><%= @employee.lastname %></td>
+	</tr>
+	<tr>
+		<td><strong>Email:</strong></td>
+		<td><%= @employee.email %></td>
+	</tr>
+	<tr>
+		<td>
+			<%= link_to 'Edit', edit_employee_path(@employee), class: "btn" %> 
+		</td>
+	</tr>
+</table>
+
+
+

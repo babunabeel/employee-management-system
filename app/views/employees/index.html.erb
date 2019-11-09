@@ -1,0 +1,28 @@
+<h1>Employees</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.firstname %></td>
+        <td><%= employee.lastname %></td>
+        <td><%= employee.email %></td>
+        <td>
+          <%= link_to 'Show', employee, class: "btn btn-default" %>
+          <%= link_to 'Edit', edit_employee_path(employee), class: "btn btn-default" %>
+          <%= link_to 'Destroy', employee, method: :delete, class: "btn btn-default" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
