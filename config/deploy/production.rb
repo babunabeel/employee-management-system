@@ -22,7 +22,14 @@
 # role :db,  %w{deploy@example.com}
 
 
-
+# role :app, %w{deploy_user@<public-ip-of-your-ec2-instance>}
+role :web, %w{ec2-user@ec2-18-219-207-10.us-east-2.compute.amazonaws.com}
+# role :db,  %w{deploy_user@<public-ip-of-your-ec2-instance>}
+set :ssh_options, {
+   keys: %w(/home/babu/.ssh/myKey),
+   forward_agent: false,
+   # auth_methods: %w(publickey password)
+ }
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb

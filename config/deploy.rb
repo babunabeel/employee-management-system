@@ -3,7 +3,11 @@ lock "~> 3.11.2"
 
 set :application, "employee-management-system"
 set :repo_url, "https://github.com/babunabeel/employee-management-system.git"
-
+set :linked_dirs, fetch(:linked_dirs, []).push(
+	'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 
+	'vendor/bundle', 'public/system', 'public/uploads')
+set :rvm_ruby_version, '2.6.3'
+set :passenger_restart_with_touch, true
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
